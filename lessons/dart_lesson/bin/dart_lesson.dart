@@ -1,8 +1,9 @@
 import 'package:dart_lesson/dart_lesson.dart' as dart_lesson;
 
 void main(List<String> arguments) {
-  List cars = ['m','b','v','g'];
+  int a = 5;
 
-  Map kfc = {'rols' : 200, 'basket': 400, };
-
+  if (a >= 5) {
+    print('есть контакт');
+  }
 }
