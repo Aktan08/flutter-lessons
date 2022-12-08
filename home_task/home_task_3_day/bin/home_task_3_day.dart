@@ -15,7 +15,7 @@ void main() {
 
   print('2)'); //Второе задание
 
-  var salary = (Random().nextInt(500000) +
+  var salary = (Random().nextInt(490000) +
       10001); // плюс 10001 так как 500000 не включительно получилось бы
   print('Ваш доход:$salary');
   if (salary <= 100000) {
