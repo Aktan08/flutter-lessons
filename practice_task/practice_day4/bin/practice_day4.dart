@@ -53,22 +53,23 @@ checker(arra) {
   }
 }
 
+bul(b) {
+  if (b == true) {
+    return ('Переменная имеет значение: Правда');
+  }
+  return ("Переменная имеет значение: Ложь");
+}
+
 void main() {
   int number1 = Random().nextInt(1000000);
   int number2 = Random().nextInt(1000000);
   int number3 = Random().nextInt(1000000);
   int minuty = Random().nextInt(60) + 1;
   List array = [1, 3, 4, 5, 6];
+  bool rocket = true;
   int subziro = Random().nextInt(100) - 50;
-  List massive = [
-    1,
-    2,
-    7,
-    7,
-    8,
-    4,
-    5
-  ]; //!!! принимает только семь цифр не больше не меньше!!!
+  List massive = [1, 2, 7, 7, 8, 4, 5];
+  //!!! принимает только семь цифр не больше не меньше!!!
   print('Число: $number1, Число2: $number2, Число3: $number3, Минуты: $minuty');
 
   print('Первое задние: ${kvadratchisla(number1)}');
@@ -76,7 +77,8 @@ void main() {
   print('Третее задние: ${raznoe(number1, number2, number3)}');
   print('Четвертое задние: ${secundy(minuty)} секунд');
   print(
-      'Первый элемент: ${pervuyElement(array)} со списка List array = [1, 3, 4, 5, 6];');
-  print('Шестое задание: Число: $subziro ${func(subziro)}');
-  print('Cедьмое задание: ${checker(massive)}  ');
+      'Пятое задание Первый элемент: ${pervuyElement(array)} со списка List array = [1, 3, 4, 5, 6];');
+  print('Шестое задание: ${bul(rocket)}');
+  print('Cедьмое задание: Число: $subziro ответ ${func(subziro)}');
+  print('Восьмое задание: ${checker(massive)}  ');
 }
