@@ -75,6 +75,7 @@ eith(number) {
 }
 
 void main() {
+  print('Первое задание: ');
   //Первое задание
   first();
 
