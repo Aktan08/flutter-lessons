@@ -142,17 +142,22 @@ eith() {
 
 nine() {
   print('Введите диапазон');
+  print('Начало: ');
   String num = (stdin.readLineSync()!);
-  int number = int.parse(num);
-  int i = 0;
-  int summ = 0;
-  do {
-    if (i % 2 == 0) {
-      summ += i;
-    }
-    i++;
-  } while (i <= number);
-  print('Cумма всех нечетный чисел: $summ');
+  int a = int.parse(num);
+  print('Конец: ');
+  String num1 = (stdin.readLineSync()!);
+  int b = int.parse(num1);
+  if (a < b) {
+    int summ = 0;
+    do {
+      if (a % 2 == 0) {
+        summ += a;
+      }
+      a++;
+    } while (a <= b);
+    print('Cумма всех нечетный чисел: $summ');
+  }
 }
 
 void main() {
