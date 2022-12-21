@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ffi';
 
 import 'package:practice_day11/practice_day11.dart' as practice_day11;
 
@@ -28,6 +29,22 @@ void main() {
 
   Phone h = Phone(number: 808080, model: 'huawei', weigth: 5);
   h.sendMessage([s.getNumber(), i.getNumber(), m.getNumber()]);
+
+  Reader vasya = Reader(
+      birthday: '08.08.2000',
+      fio: 'vasya',
+      faculty: 'krsu',
+      num: 13,
+      number: 07000000);
+
+  Book pushkin =
+      Book(authorName: 'Пушкин', names: ['Saltan', 'Onegin', 'lukomore']);
+  Book remark = Book(
+      authorName: 'Remark', names: ['arka', 'towarlish', 'zhinishv zaymy']);
+  vasya.takeBookCount(2);
+  vasya.takeBookName([pushkin, remark]);
+  vasya.returnBookCount(2);
+  vasya.returnBookName([pushkin, remark]);
 }
 
 class Country {
@@ -80,4 +97,45 @@ class Phone {
     required this.model,
     required this.weigth,
   });
+}
+
+class Reader {
+  String fio;
+  int num;
+  String faculty;
+  String birthday;
+  int number;
+
+  takeBookCount(int bookCount) {
+    print('$fio взял $bookCount книг');
+  }
+
+  takeBookName(List<Book> books) {
+    print('$fio взял $books книг');
+  }
+
+  returnBookCount(int bookCount) {
+    print('$fio взял $bookCount книг');
+  }
+
+  returnBookName(List<Book> books) {
+    print('$fio взял $books книг');
+  }
+
+  Reader(
+      {required this.fio,
+      required this.num,
+      required this.faculty,
+      required this.birthday,
+      required this.number});
+}
+
+class Book {
+  List names;
+  String authorName;
+  Book({required this.authorName, required this.names});
+  @override
+  String toString() {
+    return '$names,$authorName';
+  }
 }
